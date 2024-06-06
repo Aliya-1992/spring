@@ -1,0 +1,32 @@
+<!--<!DOCTYPE html>-->
+<!--<html xmlns:th="http://www.thymeleaf.org">-->
+<!--<head>-->
+<!--  <meta charset="UTF-8">-->
+<!--  <title>Отправка Email</title>-->
+<!--</head>-->
+<!--<body>-->
+<!--<h2>Отправить Email</h2>-->
+<!--<form th:action="@{/send-email}" th:object="${emailForm}" method="post">-->
+<!--  <input type="email" th:field="*{email}" placeholder="Введите ваш email" required />-->
+<!--  <button type="submit">Отправить</button>-->
+<!--</form>-->
+<!--</body>-->
+<!--</html>-->
+
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <title>Отправка Email с файлом</title>
+</head>
+<body>
+<h2>Отправить Email с файлом</h2>
+<form th:action="@{/send-email}" th:object="${emailForm}" method="post" enctype="multipart/form-data">
+  <input type="email" th:field="*{email}" placeholder="Введите ваш email" required />
+  <input type="file" name="file"/>
+  <textarea th:field="*{text}" placeholder="Введите ваш text"></textarea>
+  <button type="submit">Отправить</button>
+</form>
+<p>sergey.gordeev.000@mail.ru</p>
+</body>
+</html>

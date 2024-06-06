@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymeleaf.org">
+<head>
+    <title>Hello, friend!</title>
+    <style type="text/css">
+        body {
+            padding-left: 38em;
+            background-color: #03fcad;
+            position:center;}
+        ul.navbar {
+            position: absolute;
+            top: 2em;
+            left: 1em;
+            width: 9em }
+
+
+    </style>
+</head>
+<body>
+<div class="container mt-5 mb-5">
+    <div th:each="el : ${user}" >
+        <form method="post">
+            <h2> Change information:</h2>
+            <h3>name: </h3>
+            <input type="text" th:value= "${el.username}" name="username" class="form-control"/> <br />
+            <h3>email: </h3>
+            <input type="text" th:value= "${el.email}" name="email1" class="form-control"/> <br />
+            <h3>password: </h3>
+            <input type="text"  name="password" class="form-control"/> <br />
+            <h3>country: </h3>
+            <input type="text" th:value= "${el.country}" name="country" class="form-control"/> <br />
+            <button  type="submit" class="btn btn-succes">Change</button>
+
+        </form>
+
+    </div>
+</div>
+
+</body>
+</html>

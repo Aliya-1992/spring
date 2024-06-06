@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="https://www.thymeleaf.org" xmlns:sec="https://www.thymeleaf.org/thymeleaf-extras-springsecurity5">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style type="text/css">
+        body {
+            padding-left: 38em;
+            background-color: #03fcad;
+            position:center;}
+        ul.navbar {
+            position: absolute;
+            top: 2em;
+            left: 1em;
+            width: 9em }
+
+    </style>
+</head>
+<body>
+<h2>This name or email has already existed. Try again</h2>
+<h2><a href="/register" th:href="@{/register}">sign in</a></h2>
+<h3></h3>
+<img th:src="@{/img/pl.JPG}" />
+</body>
+</html>

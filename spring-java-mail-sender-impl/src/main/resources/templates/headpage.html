@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="https://www.thymeleaf.org" xmlns:sec="https://www.thymeleaf.org/thymeleaf-extras-springsecurity5">
+<head>
+    <meta charset="UTF-8">
+    <title>Welcome page</title>
+    <style type="text/css">
+        body {
+            padding-left: 38em;
+            background-color: #03fcad;
+            position:center;}
+        ul.navbar {
+            position: absolute;
+            top: 2em;
+            left: 1em;
+            width: 9em }
+
+    </style>
+</head>
+<body>
+<h1>WELCOME</h1>
+
+<label>Hi, dear user </label>
+<p>[[${#authentication.principal.username}]]</p>
+<p>Here you can find out about Kazan more</p>
+
+<h3>A few interesting fact about Kazan</h3>
+<p><a href="/first-fact" th:href="@{/first-fact}">Fact number one.City of Tourists</a></p>
+<p><a href="/second-fact" th:href="@{/second-fact}">Fact number two.Kazan is older than Moscow</a></p>
+<p><a href="/third-fact" th:href="@{/third-fact}">Fact number three. Kazan is home to one of the largest mosques in Europe</a></p>
+<p><a href="/forth-fact" th:href="@{/fourth-fact}">Fact number four. Kazan’s metro system has only 10 stops</a></p>
+<p><a href="/forth-fact" th:href="@{/fifth-fact}">Fact number five. Europe’s longest river runs through the city</a></p>
+
+
+<h2><a th:href="'/headpage-details/'+${#authentication.principal.username}"  class = "bth btn-warning">profile</a></h2>
+
+</td>
+
+</body>
+</html>

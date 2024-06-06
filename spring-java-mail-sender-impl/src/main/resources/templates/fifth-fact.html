@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="https://www.thymeleaf.org" xmlns:sec="https://www.thymeleaf.org/thymeleaf-extras-springsecurity5">
+    <head>
+        <meta charset="UTF-8">
+        <title>Fact number one</title>
+        <style type="text/css">
+            body {
+
+                background-color: #03fcad;
+                position:center;}
+            ul.navbar {
+                position: absolute;
+                top: 2em;
+                left: 1em;
+                width: 9em }
+
+        </style>
+
+    </head>
+    <body>
+    <p><a href="/headpage" th:href="@{/headpage}">Back to main page</a></p>
+    <h1>At 3,700 km (2,300 mi), the Volga is Europe’s longest river. It starts in the Valday Hills in northwestern Russia, and eventually ends in the Caspian Sea. Kazan is set on the confluence of the Volga and Kazanka rivers, which makes for a pretty spectacular view from certain parts of town. Inside the Kremlin, among some of the city’s most important sights, there is a lookout point where sightseers can take in the Volga’s natural beauty.
+    </h1>
+    <img th:src="@{/img/volga.JPG}" />
+    </body>
+    </html>

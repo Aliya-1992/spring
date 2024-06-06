@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="https://www.thymeleaf.org" xmlns:sec="https://www.thymeleaf.org/thymeleaf-extras-springsecurity5">
+    <head>
+        <meta charset="UTF-8">
+        <title>Fact number one</title>
+        <style type="text/css">
+            body {
+
+                background-color: #03fcad;
+                position:center;}
+            ul.navbar {
+                position: absolute;
+                top: 2em;
+                left: 1em;
+                width: 9em }
+
+        </style>
+
+    </head>
+    <body>
+    <p><a href="/headpage" th:href="@{/headpage}">Back to main page</a></p>
+    <h1>Construction of the Qolşärif Mosque began in the 16th century and, at the time, was famed for being the largest mosque in Europe. However, in 1552 Ivan the Terrible stormed the city and destroyed Qolşärif, and it wasn’t until 1996 that restoration began to take place. Finished in 2005, visitors can now see the mosque in its full splendour.
+    </h1>
+    <img th:src="@{/img/moskue.JPG}" />
+    </body>
+    </html>

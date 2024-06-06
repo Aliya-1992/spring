@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="https://www.thymeleaf.org">
+<head>
+    <title>Login page</title>
+    <style type="text/css">
+        body {
+            padding-left: 38em;
+            background-color: #03fcad;
+            position:center;}
+        ul.navbar {
+            position: absolute;
+            top: 2em;
+            left: 1em;
+            width: 9em }
+
+    </style>
+    <meta charset="utf-8" />
+    <link rel="stylesheet"  />
+</head>
+<body>
+<h1>Login page</h1>
+
+
+<form th:action="@{/register}" method="post">
+    <label for="username">Username</label>:
+    <input type="text" id="username" name="username" autofocus="autofocus" /> <br />
+    <label for="email">email: </label>
+    <input type="text" id = "email" name="email"/><br/>
+    <label for="password">Password</label>:
+    <input type="password" id="password" name="password" /> <br />
+
+    <label for="country">country: </label>
+    <input type="text" id = "country" name="country"/><br/>
+    <input type="submit" value="Register"/>
+
+</form>
+<p><a href="/index" th:href="@{/index}">Back to home page</a></p>
+</body>
+</html>

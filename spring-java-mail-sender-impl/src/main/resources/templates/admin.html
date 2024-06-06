@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymeleaf.org">
+<head>
+    <title>Hello, friend!</title>
+    <style type="text/css">
+        body {
+
+            background-color: #03fcad;
+            position:center;}
+        ul.navbar {
+            position: absolute;
+            top: 2em;
+            left: 1em;
+            width: 9em }
+
+    </style>
+</head>
+<body>
+<div class="container">
+    <table>
+                <thead>
+                <tr>
+                    <td>id:</td>
+                    <td>username:</td>
+                    <td>email:</td>
+                    <td>password:</td>
+                    <td>country:</td>
+                    <td>role:</td>
+                </tr>
+                </thead>
+                <tbody>
+                <tr th:each="el : ${users}">
+                    <td th:text="${el.id}"></td>
+                    <td th:text="${el.username}"></td>
+                    <td th:text="${el.email}"></td>
+                    <td th:text="${el.password}"></td>
+                    <td th:text="${el.country}"></td>
+                    <td th:text="${el.role}"></td>
+                    <td><a th:href="'/admin/edit/'+${el.id}"  class = "bth btn-warning">edit</a></td>
+                    <td><form th:action="'/admin/delete/'+${el.id}" method="post">
+                        <button type="submit">delete</button>
+                    </form></td>
+                </tr>
+
+                </tbody>
+
+            </table>
+
+         </div>
+
+
+</body>
+</html>

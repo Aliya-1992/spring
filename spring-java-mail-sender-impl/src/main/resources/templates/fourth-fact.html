@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="https://www.thymeleaf.org" xmlns:sec="https://www.thymeleaf.org/thymeleaf-extras-springsecurity5">
+    <head>
+        <meta charset="UTF-8">
+        <title>Fact number one</title>
+        <style type="text/css">
+            body {
+
+                background-color: #03fcad;
+                position:center;}
+            ul.navbar {
+                position: absolute;
+                top: 2em;
+                left: 1em;
+                width: 9em }
+
+        </style>
+
+    </head>
+    <body>
+    <p><a href="/headpage" th:href="@{/headpage}">Back to main page</a></p>
+    <h1>The underground train system is comprised of only one line which runs through 10 stops. Riding the line from one end to the other will take approximately 15 minutes, making it one of the shortest metros in the world. Kazan‘s metro system was constructed in 2005, and announcements are made in Tatar, Russian and English. In line with Moscow’s metro, the interior design of the stations are hugely impressive.
+    </h1>
+    <img th:src="@{/img/metro.JPG}" />
+    </body>
+    </html>

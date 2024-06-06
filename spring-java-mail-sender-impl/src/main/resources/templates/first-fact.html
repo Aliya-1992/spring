@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="https://www.thymeleaf.org" xmlns:sec="https://www.thymeleaf.org/thymeleaf-extras-springsecurity5">
+    <head>
+        <meta charset="UTF-8">
+        <title>Fact number one</title>
+        <style type="text/css">
+            body {
+
+                background-color: #03fcad;
+                position:center;}
+            ul.navbar {
+                position: absolute;
+                top: 2em;
+                left: 1em;
+                width: 9em }
+
+        </style>
+
+</head>
+<body>
+<p><a href="/headpage" th:href="@{/headpage}">Back to main page</a></p>
+<h1>In 2014, TripAdvisor named Kazan one of the most rapidly developing tourist destinations.
+    The capital of Tatarstan, visited by over 1,000,000 tourists every year, was rated third
+    in Europe and eighth in the world. The number of engaging excursions and tours around
+    the sights of Kazan and neighbouring areas is simply astounding.
+</h1>
+<img th:src="@{/img/kazan1.JPG}" />
+</body>
+</html>

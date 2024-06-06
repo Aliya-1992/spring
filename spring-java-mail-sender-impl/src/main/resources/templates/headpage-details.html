@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymeleaf.org">
+<head>
+    <title>Hello, friend!</title>
+    <style type="text/css">
+        body {
+            padding-left: 38em;
+            background-color: #03fcad;
+            position:center;}
+        ul.navbar {
+            position: absolute;
+            top: 2em;
+            left: 1em;
+            width: 9em }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div th:each="el : ${user}" class="alert alert-info">
+            <h2> You data: </h2>
+           <h3>name: </h3>
+            </p> <p th:text="${el.username}"></p>
+            <h3>email: </h3>
+            <p th:text="${el.email}"></p>
+            <h3>country: </h3>
+            <p th:text="${el.country}"></p>
+
+            <h2><a th:href="'/headpage-details/'+${el.id}+'/edit'"  class = "bth btn-warning">edit information</a></h2>
+            <h2><a href="/admin" th:href="@{/admin}">button for administrator</a></h2>
+
+        </div>
+
+    </div>
+</body>
+</html>
